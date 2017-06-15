@@ -1,0 +1,69 @@
+<div class="container">
+	<h1>Knex.Inc</h1>
+
+	<div class="row">
+		<div class="col-md-6">
+	    <h1>Total orders : {{ orders }}</h1>
+	  </div>
+	  <div class="col-md-6">
+	    <h1>Total Amount : {{ totalAmountOfOrders }}</h1>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+		<div class="table-responsive"> 
+			<table class="table">
+				<tr>
+					<th>Orders</th>
+					<th>Count Of Customers</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>{{exactOneOrders}}</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>{{exactTwoOrders}}</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>{{exactThreeOrders}}</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>{{ exactFourOrders }}</td>
+				</tr>
+				<tr>
+					<td>5+</td>
+					<td>{{fivePlusOrders}}</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<div class="col-md-6">
+		<div class="table-responsive">
+		<table class="table">
+			<tr>
+				<th>Orders</th>
+				<th>Count Of Customers</th>
+			</tr>
+			<tr>
+			<tr ng-repeat='data in exactOneOrdersCustomerList'>
+					<td> {{data.phone}}</td>
+					<td> {{data.name}}</td>
+			</tr>
+		</table>
+		</div>
+		</div>
+
+	</div>
+
+	<div 
+	    data-ac-chart="'bar'" 
+	    data-ac-data="data" 
+	    data-ac-config="config" 
+	    class="chart"
+	    >
+	  </div>
+</div>	  
